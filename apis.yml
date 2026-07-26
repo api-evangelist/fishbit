@@ -1,7 +1,24 @@
 aid: fishbit
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fishbit.png
 name: Fishbit
-description: Fishbit is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Fishbit is a smart-aquarium management company whose platform pairs a mobile app (iOS/Android)
+  with connected hardware — the Fishbit Monitor, which tracks water parameters such as pH, temperature, and
+  salinity in real time, and the Fishbit Controller, which wirelessly automates aquarium equipment. Hobbyists
+  and reef keepers use the system to remotely monitor tank conditions and automate lighting, pumps, and dosing.
+  The company sells its monitoring and control hardware through an online store and ran a device-manufacturer
+  partner program (e.g. RapidLED Corona integration). No public API, developer portal, or SDK is currently
+  published; this API Evangelist profile tracks the company as a connected-hardware / IoT lead.
 url: https://raw.githubusercontent.com/api-evangelist/fishbit/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +28,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Aquarium
+- Smart Home
+- IoT
+- Connected Hardware
+- Water Monitoring
+- Consumer Electronics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +44,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/fishbit-domain-security.yml
 - type: Website
   url: https://getfishbit.com
+- type: PrivacyPolicy
+  url: https://getfishbit.com/policy.html
+- type: Store
+  url: https://shop.getfishbit.com/
+- type: Pricing
+  url: https://shop.getfishbit.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
